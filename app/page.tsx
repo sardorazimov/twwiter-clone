@@ -1,101 +1,129 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import Image from "next/image"
 
-export default function Home() {
+export default function AuthPage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-black text-white">
+      <div className=" flex min-h-screen items-center justify-center md:justify-between px-4">
+        <div className="hidden md:block p-20">
+          <div className="w-64 h-64">
+            <svg viewBox="0 0 24 24" className="w-full h-full fill-current">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        
+        <div className="max-w-md space-y-8 w-full">
+          <div className="space-y-4">
+            <h1 className="text-6xl font-bold tracking-tight">Happening now</h1>
+            <h2 className="text-3xl font-bold">Join today.</h2>
+          </div>
+          
+          <div className="space-y-4">
+            <Button 
+              variant="outline" 
+              className="w-full bg-white text-black hover:bg-gray-100 justify-start px-4"
+            >
+              <Image
+                src="/google.svg"
+                alt="Google"
+                width={20}
+                height={20}
+                className="mr-2"
+              />
+              Sign up with Google
+            </Button>
+            
+            <Button 
+              variant="outline"
+              className="w-full bg-white text-black hover:bg-gray-100 justify-start px-4"
+            >
+              <Image
+                src="/apple.svg"
+                alt="Apple"
+                width={20}
+                height={20}
+                className="mr-2"
+              />
+              Sign up with Apple
+            </Button>
+            
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center">
+                <span className="w-full border-t border-gray-700" />
+              </div>
+              <div className="relative flex justify-center text-xs uppercase">
+                <span className="bg-black px-2 text-gray-400">or</span>
+              </div>
+            </div>
+            
+            <Button className="w-full bg-blue-500 hover:bg-blue-600">
+              Create account
+            </Button>
+            
+            <p className="text-xs text-gray-400">
+              By signing up, you agree to the{" "}
+              <Link href="#" className="text-blue-500 hover:underline">
+                Terms of Service
+              </Link>{" "}
+              and{" "}
+              <Link href="#" className="text-blue-500 hover:underline">
+                Privacy Policy
+              </Link>
+              , including{" "}
+              <Link href="#" className="text-blue-500 hover:underline">
+                Cookie Use
+              </Link>
+              .
+            </p>
+          </div>
+          
+          <div className="space-y-4">
+            <p className="font-bold">Already have an account?</p>
+            <Button 
+              variant="outline" 
+              className="w-full border-gray-700 text-blue-500 hover:bg-blue-950"
+            >
+              Sign in
+            </Button>
+          </div>
+        </div>
+      </div>
+      
+      <footer className="fixed bottom-0 w-full py-4 px-4 text-sm text-gray-500">
+        <nav className="flex flex-wrap justify-center gap-4">
+          {[
+            "About",
+            "Download the X app",
+            "Help Center",
+            "Terms of Service",
+            "Privacy Policy",
+            "Cookie Policy",
+            "Accessibility",
+            "Ads info",
+            "Blog",
+            "Careers",
+            "Brand Resources",
+            "Advertising",
+            "Marketing",
+            "X for Business",
+            "Developers",
+            "Directory",
+            "Settings"
+          ].map((item) => (
+            <Link 
+              key={item} 
+              href="#" 
+              className="hover:underline"
+            >
+              {item}
+            </Link>
+          ))}
+          <span>© 2024 X Corp.</span>
+        </nav>
       </footer>
     </div>
-  );
+  )
 }
+
