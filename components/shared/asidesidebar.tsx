@@ -6,7 +6,7 @@ import { Input } from '../ui/input'
 
 const Asidesidebar = () => {
   return (
-    <div className='fixed '>
+    <div className='fixed lg:flex hidden '>
        <aside className="md:col-span-4 space-y-4 p-4">
           {/* Search */}
           <div className="relative">

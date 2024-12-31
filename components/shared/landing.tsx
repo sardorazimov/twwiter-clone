@@ -6,7 +6,7 @@ import Asidesidebar from './asidesidebar'
 
 export default function TwitterInterface() {
   return (
-    <div className="min-h-screen w-full  text-white">
+    <div className="min-h-screen w-full lg:flex hidden text-white">
       <div className=" mx-auto  gap-4">
         {/* Main Content */}
         <main className="md:col-span-8  border-white/10">

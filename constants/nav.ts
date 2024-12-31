@@ -2,15 +2,15 @@ import { Home, User, Bell, Mail, Bookmark, List, Circle, Search } from "lucide-r
 
 export const navItems = [
   { name: 'Home', href: '/', icon: Home },
-  {name: 'Search', href: '/', icon: Search},
+  {name: 'Search', href: '/dashbaord/search', icon: Search},
   { name: 'Profile', href: '/dashboard/profile', icon: User },
-  { name: 'Notifications', href: '/notifications', icon: Bell },
-  { name: 'Messages', href: '/messages', icon: Mail },
-  { name: 'Bookmarks', href: '/bookmarks', icon: Bookmark },
-  { name: 'Lists', href: '/lists', icon: List },
-  { name: 'More', href: '/more', icon: Circle },
-  { name: 'Ai', href: '/bookmarks', icon: Bookmark },
-  { name: 'Communty', href: '/lists', icon: List },
-  { name: 'Devlopers', href: '/more', icon: Circle },
+  { name: 'Notifications', href: '/dashboard/notifications', icon: Bell },
+  { name: 'Messages', href: '/dashboard/messages', icon: Mail },
+  { name: 'Bookmarks', href: '/dashboard/bookmarks', icon: Bookmark },
+  { name: 'Lists', href: '/dashboard/lists', icon: List },
+  { name: 'More', href: '/dashboard/more', icon: Circle },
+  { name: 'Ai', href: '/dashboard/ai', icon: Bookmark },
+  { name: 'Communty', href: '/dashboard/community', icon: List },
+  { name: 'Devlopers', href: '/dashhboard/more', icon: Circle },
 ]
 
