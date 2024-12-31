@@ -11,7 +11,7 @@ const Layout = ({children}:DashboardLayoutProps) => {
   return (
     <main className="w-full min-h-screen flex">
        <aside className="lg:flex w-[400px] hidden h-full border-rborder-white/10 fixed"><Sidebar /></aside>
-       <section className="lg:pl-[400px]">
+       <section className="lg:pl-[400px] h-full">
        {children}
      </section>
     </main>
