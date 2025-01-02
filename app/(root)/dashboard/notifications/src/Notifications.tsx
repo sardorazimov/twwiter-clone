@@ -27,9 +27,9 @@ const notifications = [
 
 export default function NotificationsPage() {
   return (
-    <div className="lg:w-[700px] w-full mx-auto px-4">
+    <div className="lg:w-[700px] w-full sm:w-full mx-auto px-4">
       <h1 className="text-2xl font-bold mb-4">Notifications</h1>
-      <div className="space-y-4">
+      <div className="space-y-4 w-full">
         {notifications.map((notification) => (
           <div key={notification.id} className="flex items-center w-full space-x-3 p-3 border border-white/10 rounded-xl  shadow">
             <div className="flex-shrink-0">
