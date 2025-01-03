@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card"
 import React from 'react'
 import { PostList } from './src/post-list'
 import Asidesidebar from '@/components/shared/asidesidebar'
+import Newlist from './src/newlist'
 
 const page = () => {
   return (
@@ -42,6 +43,7 @@ const page = () => {
       </Tabs>
         </div>
       </div>
+      <Newlist/>
       <PostList/>
      </div>
      <div className='lg:flex fixed lg:pl-[700px] hidden'>
