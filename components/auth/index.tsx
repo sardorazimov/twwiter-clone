@@ -1,13 +1,31 @@
+'use client'
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { Button } from "../ui/button";
 import { Mail } from "lucide-react";
+import { signIn } from "next-auth/react";
+import useRegisterModal from "@/hooks/useRegisterModal";
+import useLoginModal from "@/hooks/useLoginModal";
+import { useCallback } from "react";
+import RegisterModal from "../modals/register-modal";
+import LoginModal from "../modals/login-modal";
 
 
 export default function Auth(){
- const router =useRouter()
+   const registerModal = useRegisterModal()
+	const loginModal = useLoginModal()
+
+	const onOpenRegisterModal = useCallback(() => {
+		registerModal.onOpen()
+	}, [registerModal])
+
+	const onOpenLoginModal = useCallback(() => {
+		loginModal.onOpen()
+	}, [loginModal])
+
  return(
     <>
+    <RegisterModal/>
+    <LoginModal/>
      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center h-screen">
         <Image 
          src={'landing.jpg'}
@@ -24,7 +42,7 @@ export default function Auth(){
           <h2 className='font-bold text-3xl mb-4'>Join today.</h2>
           <div className="flex flex-col space-y-2">
             <Button
-            onClick={() => ()}
+            onClick={() => signIn('google')}
             >
              <span className="flex gap-2 items-center justify-center">
                 <Mail/>
@@ -32,7 +50,7 @@ export default function Auth(){
              </span>
             </Button>
             <Button
-            onClick={() => ()}
+            onClick={() => signIn('github')}
             >
              <span className="flex gap-2 items-center justify-center">
                 <Mail/>
@@ -45,7 +63,7 @@ export default function Auth(){
                 <div className="h-px bg-gray-800 w-1/2"/>
             </div>
             <Button
-              onClick={()}
+              onClick={(onOpenRegisterModal)}
              className="">
                 Create Account
              </Button>
@@ -62,7 +80,7 @@ export default function Auth(){
                Already have an account
             </h3>
             <Button
-            onClick={() => ()}
+            onClick={() => (onOpenLoginModal)}
              className="">
                 Sign in
              </Button>
